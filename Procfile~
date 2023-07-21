@@ -1,0 +1,1 @@
+web: gunicorn perancis.wsgi:application --log-file -

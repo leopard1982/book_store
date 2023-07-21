@@ -1,0 +1,16 @@
+{% extends 'homepage.html'%} {% load static %} {% block content_again %}
+<table>
+  <thead>
+    {% for col in data.columns%}
+    <th>{{col}}</th>
+    {% endfor %}
+  </thead>
+  {% for index, row in data.iterrows %}
+  <tr>
+    {% for cell in row %}
+    <td>{{cell | truncatechars:50}}</td>
+    {% endfor%}
+  </tr>
+  {% endfor %}
+</table>
+{% endblock%}
